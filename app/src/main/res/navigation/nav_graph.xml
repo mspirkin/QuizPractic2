@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/questionFirst">
+    <fragment
+        android:id="@+id/questionFirst"
+        android:name="com.avtocontrol.quizpractic2.fragments.QuestionFirst"
+        android:label="Вопрос 1"
+        tools:layout="@layout/fragment_question_first" >
+        <action
+            android:id="@+id/action_questionFirst_to_questionTwo"
+            app:destination="@id/questionTwo" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionTwo"
+        android:name="com.avtocontrol.quizpractic2.fragments.QuestionTwo"
+        android:label="Вопрос 2"
+        tools:layout="@layout/fragment_question_two" >
+        <action
+            android:id="@+id/action_questionTwo_to_questionThree"
+            app:destination="@id/questionThree"
+
+            />
+        <action
+            android:id="@+id/action_questionTwo_to_questionFirst"
+            app:destination="@id/questionFirst"
+            app:popUpTo="@id/questionFirst"
+
+
+
+
+
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/questionThree"
+        android:name="com.avtocontrol.quizpractic2.fragments.QuestionThree"
+        android:label="Вопрос 3"
+        tools:layout="@layout/fragment_question_three" >
+        <action
+            android:id="@+id/action_questionThree_to_questionFour"
+            app:destination="@id/questionFour"
+             />
+
+        <action
+            android:id="@+id/action_questionThree_to_questionTwo"
+            app:destination="@id/questionTwo"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFour"
+        android:name="com.avtocontrol.quizpractic2.fragments.QuestionFour"
+        android:label="Вопрос 4"
+        tools:layout="@layout/fragment_question_four" >
+        <action
+            android:id="@+id/action_questionFour_to_questionFive"
+            app:destination="@id/questionFive" />
+        <action
+            android:id="@+id/action_questionFour_to_questionThree"
+            app:destination="@id/questionThree" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFive"
+        android:name="com.avtocontrol.quizpractic2.fragments.QuestionFive"
+        android:label="Вопрос 5"
+        tools:layout="@layout/fragment_question_five" >
+        <action
+            android:id="@+id/action_questionFive_to_questionFinish"
+            app:destination="@id/questionFinish" />
+        <action
+            android:id="@+id/action_questionFive_to_questionFour"
+            app:destination="@id/questionFour" />
+    </fragment>
+    <fragment
+        android:id="@+id/questionFinish"
+        android:name="com.avtocontrol.quizpractic2.fragments.QuestionFinish"
+        android:label="fragment_question_finish"
+        tools:layout="@layout/fragment_question_finish">
+        <action
+            android:id="@+id/action_questionFinish_to_questionFirst"
+            app:destination="@id/questionFirst" />
+        <deepLink
+            android:id="@+id/deepLink"
+            app:action="ACTION_SEND"
+            app:uri="primer@yandex.ru" />
+    </fragment>
+</navigation>

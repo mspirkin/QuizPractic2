@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">QuizPractic2</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="next">NEXT</string>
+    <string name="previous">PREVIOUS</string>
+    <string name="submit">SUBMIT</string>
+</resources>
