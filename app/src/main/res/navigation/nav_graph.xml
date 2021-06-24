@@ -20,19 +20,11 @@
         tools:layout="@layout/fragment_question_two" >
         <action
             android:id="@+id/action_questionTwo_to_questionThree"
-            app:destination="@id/questionThree"
-
-            />
+            app:destination="@id/questionThree" />
         <action
             android:id="@+id/action_questionTwo_to_questionFirst"
             app:destination="@id/questionFirst"
-            app:popUpTo="@id/questionFirst"
-
-
-
-
-
-            />
+            app:popUpTo="@id/questionFirst" />
     </fragment>
     <fragment
         android:id="@+id/questionThree"
@@ -41,13 +33,11 @@
         tools:layout="@layout/fragment_question_three" >
         <action
             android:id="@+id/action_questionThree_to_questionFour"
-            app:destination="@id/questionFour"
-             />
+            app:destination="@id/questionFour" />
 
         <action
             android:id="@+id/action_questionThree_to_questionTwo"
-            app:destination="@id/questionTwo"
-            />
+            app:destination="@id/questionTwo" />
     </fragment>
     <fragment
         android:id="@+id/questionFour"
@@ -81,9 +71,5 @@
         <action
             android:id="@+id/action_questionFinish_to_questionFirst"
             app:destination="@id/questionFirst" />
-        <deepLink
-            android:id="@+id/deepLink"
-            app:action="ACTION_SEND"
-            app:uri="primer@yandex.ru" />
     </fragment>
 </navigation>

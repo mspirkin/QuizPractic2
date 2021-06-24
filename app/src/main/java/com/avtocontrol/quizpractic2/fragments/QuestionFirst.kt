@@ -24,7 +24,7 @@ class QuestionFirst : Fragment(R.layout.fragment_question_first) {
 
         val appBarConfiguration = AppBarConfiguration(findNavController().graph)
         binging.toolbarQuestionFirst.setupWithNavController(findNavController(), appBarConfiguration)
-//        binging.toolbarQuestionFirst.setBackgroundResource(R.color.deep_orange_100)
+
 
 
         //Начальное состояние кнопок Next и Previous
