@@ -70,6 +70,10 @@
         tools:layout="@layout/fragment_question_finish">
         <action
             android:id="@+id/action_questionFinish_to_questionFirst"
-            app:destination="@id/questionFirst" />
+            app:destination="@id/questionFirst"
+            app:popUpTo="@id/questionFirst"
+            app:popUpToInclusive="true"
+            app:popUpToSaveState="false"/>
+
     </fragment>
 </navigation>

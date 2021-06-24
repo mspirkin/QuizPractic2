@@ -74,10 +74,13 @@ class QuestionFinish : Fragment(R.layout.fragment_question_finish) {
         }
         //Слушатель кнопки Назад
         binding.btnBack.setOnClickListener {
-            viewModel.clearRadioButton()
-            findNavController().navigate(R.id.action_questionFinish_to_questionFirst, null, navOptions { popUpTo(R.id.questionFirst, popUpToBuilder = {inclusive = true}) })
+            backToReset()
         }
 
+    }
+    fun backToReset() {
+        viewModel.clearRadioButton()
+        findNavController().navigate(R.id.action_questionFinish_to_questionFirst, null, navOptions { popUpTo(R.id.questionFirst, popUpToBuilder = {inclusive = true}) })
     }
 
     override fun onDestroyView() {
